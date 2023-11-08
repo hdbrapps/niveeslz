@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+  background-image: url(https://img.freepik.com/vetores-gratis/fundo-de-celebracao-de-purim-gradiente_23-2150112118.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699228800&semt=ais);
+  background-size: cover;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  font-family: 'Sora', sans-serif;
+}
+
+header,
+main,
+footer {
+  width: 500px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2,
+h3 {
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+header {
+  background-color: #1d1d20;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+header .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+header .header img {
+  width: 30%;
+}
+
+header .header .header__info {
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+}
+
+main article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 40px;
+  background-color: rgba(29, 29, 32, 0.7);
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-left: 4px solid #1d1d20b4;
+  height: 83px;
+}
+
+main article .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+main article .title i {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+main article .title h3 {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+main article p {
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+main article:hover {
+  background-color: #1d1d20;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  border-left: 4px solid #5adbff;
+}
+
+main article:hover .title i,
+main article:hover .title h3 {
+  color: #fff;
+}
+
+main article:hover p {
+  color: #fff;
+}
+
+main .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+main .social i {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main .social i:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+footer p {
+  font-size: 0.825rem;
+  color: rgba(255, 255, 255, 0.702);
+}
+
+@media (max-width: 552px) {
+  header,
+  main,
+  footer {
+    max-width: 100%;
+  }
+  header h1 {
+    font-size: 1.25rem;
+  }
+  header p {
+    font-size: 0.906rem;
+  }
+  main article .title i {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  main article .title h3 {
+    font-size: 0.906rem;
+  }
+  main p {
+    font-size: 0.906rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
