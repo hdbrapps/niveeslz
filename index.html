@@ -12,6 +12,35 @@
     <link rel="stylesheet" href="/assets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const mensagens = [
+            "Você foi convidado (a) para minha festa, de 3 aninhos",
+            "Chácara Reale - <i class='bx bx-map'></i> Vila Flamengo"
+          ];
+          const mensagemElement = document.querySelector(".mensagem");
+    
+          let mensagemIndex = 0;
+          let charIndex = 0;
+    
+          function typeMessage() {
+            if (charIndex === mensagens[mensagemIndex].length) {
+              if (mensagemIndex === mensagens.length - 1) {
+                return; // Encerre o efeito após exibir todas as mensagens
+              }
+              mensagemIndex++;
+              charIndex = 0;
+            }
+    
+            mensagemElement.innerHTML = mensagens[mensagemIndex].substring(0, charIndex);
+            charIndex++;
+            setTimeout(typeMessage, 100); // Velocidade de digitação (100 milissegundos)
+          }
+    
+          typeMessage();
+        });
+      </script>
+      
 </head>
 
 <body>
@@ -21,7 +50,9 @@
             <div class="header__info">
                 <h1>Convite Aniversário</h1>
                 <p><i class="bx bx-calendar"></i> 3 aninhos</p>
-                <p><i class="bx bx-map"></i> Chácara Reale -  Vila Flamengo</p>
+                <div id="convite">
+                    <p class="mensagem"></p>
+                  </div>
             </div>
         </div>
     </header>
@@ -32,7 +63,7 @@
 
 
 
-        <a href="https://go.hotmart.com/I67364650R" target="_blank" rel="noopener noreferrer">
+        <a href="#" target="_blank" rel="noopener noreferrer">
             <article>
                 <div class="title">
                     <i class='bx bx-map' aria-hidden='true'></i>
@@ -43,7 +74,7 @@
             </article>
         </a>
 
-        <a href="https://matheusqueirozds.vercel.app/" target="_blank" rel="noopener noreferrer">
+        <a href="#" target="_blank" rel="noopener noreferrer">
             <article>
                 <div class="title">
                     <i class='bx bx-check'></i>
