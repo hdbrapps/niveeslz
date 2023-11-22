@@ -1,10 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+/* CSS para estilizar o modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Adicione qualquer estilo de formatação adicional aqui, se necessário */
+
 
 body {
   display: -webkit-box;
@@ -12,21 +47,62 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 100vh;
   width: 100%;
   color: #fff;
-  background-image: url(https://img.freepik.com/vetores-gratis/fundo-de-celebracao-de-purim-gradiente_23-2150112118.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699228800&semt=ais);
-  background-size: cover;
   padding: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-size: 1rem;
   font-family: 'Sora', sans-serif;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(-45deg, #ff69b4, #00bfff, #ff69b4, #00bfff);
+  background-size: 400% 400%;
+  animation: vibrant 8s ease-in-out infinite;
+}
+
+@keyframes vibrant {
+  0% {
+      background-position: 0% 0%;
+  }
+  100% {
+      background-position: 100% 100%;
+  }
+}
+
+/* CSS para tornar o texto amarelo e animado */
+#data {
+  color: yellow;
+  /* Define a cor do texto como amarelo */
+  animation: blink 2s linear infinite;
+  /* Cria a animação de piscar */
+}
+
+/* Defina a animação de piscar */
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 header,
@@ -68,14 +144,24 @@ header .header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 40px;
 }
 
 header .header img {
-  width: 30%;
+  /* width: 30%; */
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
 
 header .header .header__info {
   display: -ms-grid;
@@ -88,11 +174,11 @@ main article {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   gap: 40px;
   background-color: rgba(29, 29, 32, 0.7);
   margin: 20px 0;
@@ -100,7 +186,7 @@ main article {
   border-radius: 10px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  border-left: 4px solid #1d1d20b4;
+  border-left: 4px solid #fff;
   height: 83px;
 }
 
@@ -109,14 +195,14 @@ main article .title {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 20px;
 }
 
 main article .title i {
   -webkit-transform: scale(1.6);
-          transform: scale(1.6);
+  transform: scale(1.6);
   color: rgba(255, 255, 255, 0.8);
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -138,7 +224,7 @@ main article p {
 main article:hover {
   background-color: #1d1d20;
   -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
   border-left: 4px solid #5adbff;
 }
 
@@ -156,14 +242,14 @@ main .social {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   gap: 20px;
 }
 
 main .social i {
   -webkit-transform: scale(1.6);
-          transform: scale(1.6);
+  transform: scale(1.6);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -184,26 +270,43 @@ footer p {
 }
 
 @media (max-width: 552px) {
+
   header,
   main,
   footer {
     max-width: 100%;
   }
+
   header h1 {
     font-size: 1.25rem;
   }
+
   header p {
     font-size: 0.906rem;
   }
+
   main article .title i {
     -webkit-transform: scale(1.4);
-            transform: scale(1.4);
+    transform: scale(1.4);
   }
+
   main article .title h3 {
     font-size: 0.906rem;
   }
+
   main p {
     font-size: 0.906rem;
   }
 }
-/*# sourceMappingURL=styles.css.map */
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: var(--bs-modal-title-line-height);
+  color: black;
+  font-weight: 600;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+  color: black;
+}
