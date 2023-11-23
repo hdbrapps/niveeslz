@@ -101,6 +101,8 @@ h1 {
   font-weight: bold;
   white-space: nowrap;
   width: 50px;
+  position: relative;
+  right: 60px;
 }
 h2,
 h3 {
