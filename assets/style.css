@@ -138,8 +138,8 @@ header .header {
 header .header img {
   /* width: 30%; */
   border-radius: 50%;
-  height: 180px;
-  width: 180px;
+  height: 80px;
+  width: 80px;
   background: rgba(255, 255, 255, 0.35);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(13.5px);
